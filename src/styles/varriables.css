@@ -1,0 +1,10 @@
+/* Переменные стилей */
+:root {
+  --black: #161616;
+  --green: #29a47a;
+  --white: white;
+  --accent: var(--green);
+
+  --text: 16px;
+  --title: 30px;
+}

@@ -1,0 +1,110 @@
+.benefits {
+  padding-top: 120px;
+  padding-bottom: 90px;
+}
+
+.benefits__wrapper {
+  display: flex;
+  column-gap: 30px;
+}
+
+@media (max-width: 576px) {
+  .benefits__wrapper {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 30px;
+    flex-direction: column;
+  }
+}
+
+/* Левая часть блока */
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  flex: 1 1 0%;
+  font-family: 'Gilroy';
+}
+
+.titles__title {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.titles__text {
+  font-size: 30px;
+  font-weight: 200;
+  color: var(--white);
+}
+
+@media (max-width: 576px) {
+}
+
+/* Правая часть блока */
+
+.items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  flex: 1 1 0;
+  font-family: 'Gilroy';
+}
+
+.items__text {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--white);
+}
+
+.items__line {
+  width: 50%;
+  height: 1px;
+  background-color: var(--accent);
+}
+
+@media (max-width: 576px) {
+  .items__text {
+    display: none;
+  }
+}
+
+/* Список преимуществ */
+.items__wrapper {
+  display: flex;
+  column-gap: 30px;
+  font-weight: 300;
+}
+
+@media (max-width: 576px) {
+  .items__wrapper {
+    display: flex;
+    flex-direction: column;
+    column-gap: 30px;
+    row-gap: 30px;
+    font-weight: 300;
+  }
+}
+
+/* Преимущество */
+.item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.item__title {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.item__text {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--white);
+}
+
+@media (max-width: 576px) {
+}

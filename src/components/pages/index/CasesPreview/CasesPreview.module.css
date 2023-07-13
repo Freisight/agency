@@ -1,0 +1,33 @@
+.cases {
+  padding-top: 60px;
+  padding-bottom: 90px;
+}
+
+.cases__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.titles__title {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.titles__text {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  color: var(--white);
+  width: 500px;
+}
+
+.slider {
+}

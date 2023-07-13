@@ -1,0 +1,39 @@
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(75, 74, 74, 0.835);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__wrapper {
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent);
+  font-size: 30px;
+}
+
+.close {
+  display: none;
+}
