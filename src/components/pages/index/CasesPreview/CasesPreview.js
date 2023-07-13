@@ -1,10 +1,14 @@
 import styles from './CasesPreview.module.css';
 
-import CasesPreviewItem from './CasesPreviewItem';
+import CasesItem from './CasesItem';
 
 // Компоненты для галереи
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+// Компоненты управления слайдером.
+import SlideNextButton from '@/components/common/slider/SlideNextButton';
+import SlidePrevButton from '@/components/common/slider/SlidePrevButton';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -46,10 +50,14 @@ const CasesPreview = ({ casesData, indexData }) => {
               {casesData.map((item) => {
                 return (
                   <SwiperSlide>
-                    <CasesPreviewItem caseData={item.preview} />
+                    <CasesItem caseData={item.preview} />
                   </SwiperSlide>
                 );
               })}
+              <div className={styles['buttons']}>
+                <SlidePrevButton />
+                <SlideNextButton />
+              </div>
             </Swiper>
           </div>
         </div>

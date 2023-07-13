@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.list__title {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  color: var(--white);
+}
+
+.list__wrapper {
+  display: flex;
+  row-gap: 20px;
+}

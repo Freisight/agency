@@ -1,9 +1,9 @@
-import styles from './CasesPreviewItem.module.css';
+import styles from './CasesItem.module.css';
 
 import Link from 'next/link';
 import Image from 'next/image';
 
-const CasesPreviewItem = ({ caseData }) => {
+const CasesItem = ({ caseData }) => {
   return (
     <Link href={`cases/${caseData?.seo.slug}`}>
       <article className={styles['case']}>
@@ -37,4 +37,4 @@ const CasesPreviewItem = ({ caseData }) => {
   );
 };
 
-export default CasesPreviewItem;
+export default CasesItem;

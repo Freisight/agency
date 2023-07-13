@@ -1,0 +1,26 @@
+.services {
+  padding-top: 30px;
+  padding-bottom: 90px;
+}
+
+.services__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.titles {
+}
+
+.titles__title {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px;
+  grid-gap: 30px;
+}

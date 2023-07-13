@@ -1,0 +1,19 @@
+.buttons__wrapper {
+  display: flex;
+  column-gap: 10px;
+  margin-top: 15px;
+}
+
+.buttons__item {
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons__image {
+  color: var(--accent);
+  font-size: 20px;
+}

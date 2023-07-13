@@ -1,11 +1,12 @@
 // Import components
 import Head from 'next/head';
-import Image from 'next/image';
 
 // Import components only for this page
 import IndexHeader from '@/components/pages/index/IndexHeader/IndexHeader';
 import Benefits from '@/components/pages/index/Benefits/Benefits';
 import CasesPreview from '@/components/pages/index/CasesPreview/CasesPreview';
+import ServicesPreview from '@/components/pages/index/ServicesPreview/ServicesPreview';
+import HowWork from '@/components/pages/index/HowWork/HowWork';
 
 // Import common components
 import Menu from '@/components/common/Menu/Menu';
@@ -20,7 +21,10 @@ const indexData = IndexStore;
 import CasesStore from '@/stores/CasesStore';
 const casesData = CasesStore;
 
-function Home({ interfaceData, indexData, casesData }) {
+import ServicesStore from '@/stores/ServicesStore';
+const servicesStore = ServicesStore;
+
+function Home({ interfaceData, indexData, casesData, servicesStore }) {
   return (
     <>
       <Head>
@@ -37,6 +41,12 @@ function Home({ interfaceData, indexData, casesData }) {
       <IndexHeader headerData={indexData.header} />
       <Benefits benefitsData={indexData.benefits} />
       <CasesPreview casesData={casesData} indexData={indexData.cases} />
+      <ServicesPreview
+        indexData={indexData.services}
+        marketingData={servicesStore.marketing}
+        developmentData={servicesStore.development}
+      />
+      <HowWork indexData={indexData.howwework} />
     </>
   );
 }
@@ -44,6 +54,7 @@ function Home({ interfaceData, indexData, casesData }) {
 export default Home;
 
 export const getServerSideProps = async (context) => {
+  // Способ узнать текущий язык браузера.
   const { locale } = context;
   const currentLocale = locale;
 
@@ -51,12 +62,14 @@ export const getServerSideProps = async (context) => {
   await interfaceData.fetchData(currentLocale);
   await indexData.fetchData(currentLocale);
   await casesData.fetchPreviewData(currentLocale);
+  await servicesStore.fetchData(currentLocale);
 
   return {
     props: {
       interfaceData: interfaceData.data,
       indexData: indexData.data,
       casesData: casesData.dataPreviewItems,
+      servicesStore: servicesStore.data,
     },
   };
 };

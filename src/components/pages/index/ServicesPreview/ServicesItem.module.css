@@ -1,0 +1,28 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  height: 60px;
+  border-bottom: 1px solid var(--accent);
+}
+
+.item__title {
+  color: var(--white);
+  width: 150px;
+}
+
+.item__text {
+  color: var(--white);
+}
+
+.item__link {
+  color: var(--white);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+}

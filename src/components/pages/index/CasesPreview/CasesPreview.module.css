@@ -31,3 +31,9 @@
 
 .slider {
 }
+
+.buttons {
+  display: flex;
+  column-gap: 10px;
+  margin-top: 10px;
+}

@@ -1,0 +1,107 @@
+.howwork {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.howwork__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.titles {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.titles__title {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.titles__subtitle {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 200;
+  color: var(--white);
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+/* Левый блок с фото */
+
+.content__person {
+  flex: 2 1;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.label {
+  width: 230px;
+  height: 90px;
+  background-color: var(--accent);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 5px;
+}
+
+.label__title {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.label__text {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 200;
+  color: var(--white);
+}
+
+/* Правый блок с шагами работы */
+.content__steps {
+  flex: 2 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 30px;
+}
+.steps__item {
+  display: flex;
+  column-gap: 30px;
+}
+
+.item__number {
+  color: var(--white);
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 800;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.text__title {
+  color: var(--white);
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 800;
+}
+
+.text__text {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 200;
+}
