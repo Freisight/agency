@@ -2,6 +2,11 @@
   "builds": [],
   "routes": [
     { "src": "/(.*)", "dest": "/cases/index.js" },
+    { "src": "/(.*)", "dest": "/contacts/index.js" },
+    { "src": "/(.*)", "dest": "/development/index.js" },
+    { "src": "/(.*)", "dest": "/marketing/index.js" },
+    { "src": "/(.*)", "dest": "/news/index.js" },
+    { "src": "/(.*)", "dest": "/team/index.js" },
     { "src": "/(.*)", "dest": "/index.js" }
   ]
 }
