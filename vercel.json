@@ -1,4 +1,7 @@
 {
   "builds": [],
-  "routes": [{ "src": "/(.*)", "dest": "/cases/index.js" }]
+  "routes": [
+    { "src": "/(.*)", "dest": "/cases/index.js" },
+    { "src": "/(.*)", "dest": "/index.js" }
+  ]
 }

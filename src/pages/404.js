@@ -1,5 +1,5 @@
 const ErrorPage = ({ interfaceData }) => {
-  return <div>error</div>;
+  return <div>errorваваав</div>;
 };
 
 export default ErrorPage;
