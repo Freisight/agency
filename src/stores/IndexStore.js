@@ -9,7 +9,7 @@ class indexStore {
 
     if (process.env.NODE_ENV === 'production') {
       // URL для производственной среды
-      apiUrl = 'https://spontaneous-phoenix-39b801.netlify.app/api/main';
+      apiUrl = 'https://freisturz.netlify.app/api/main';
     } else {
       // URL для других сред, например, разработки
       apiUrl = 'http://localhost:3000/api/main';
