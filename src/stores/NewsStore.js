@@ -79,7 +79,7 @@ class NewsStore {
 
     // Загружает только 3 последние новости для главной страницы..
     if (currentLocale === 'en') {
-      this.dataPreviewItems = jsonData.ru.slice(0, 3);
+      this.dataPreviewItems = jsonData.en.slice(0, 3);
     }
     if (currentLocale === 'ru') {
       this.dataPreviewItems = jsonData.ru.slice(0, 3);
