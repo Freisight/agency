@@ -43,6 +43,8 @@ function Home({ interfaceData, indexData, casesData, servicesData, newsData }) {
         menuData={interfaceData.topMenu}
         timeData={interfaceData.interface.time}
       />
+      <IndexHeader headerData={indexData.header} />
+      <Benefits benefitsData={indexData.benefits} />
     </>
   );
 }
@@ -65,9 +67,6 @@ export const getServerSideProps = async (context) => {
     props: {
       interfaceData: interfaceData.data,
       indexData: indexData.data,
-      casesData: casesData.dataPreviewItems,
-      servicesData: servicesStore.data,
-      newsData: newsStore.dataPreviewItems,
     },
   };
 };
