@@ -7,6 +7,8 @@ import Benefits from '@/components/pages/index/Benefits/Benefits';
 import CasesPreview from '@/components/pages/index/CasesPreview/CasesPreview';
 import ServicesPreview from '@/components/pages/index/ServicesPreview/ServicesPreview';
 import HowWork from '@/components/pages/index/HowWork/HowWork';
+import MyTeam from '@/components/pages/index/MyTeam/MyTeam';
+import NewsPreview from '@/components/pages/index/NewsPreview/NewsPreview';
 
 // Import common components
 import Menu from '@/components/common/Menu/Menu';
@@ -24,7 +26,10 @@ const casesData = CasesStore;
 import ServicesStore from '@/stores/ServicesStore';
 const servicesStore = ServicesStore;
 
-function Home({ interfaceData, indexData, casesData, servicesStore }) {
+import NewsStore from '@/stores/NewsStore';
+const newsStore = NewsStore;
+
+function Home({ interfaceData, indexData, casesData, servicesData, newsData }) {
   return (
     <>
       <Head>
@@ -43,10 +48,12 @@ function Home({ interfaceData, indexData, casesData, servicesStore }) {
       <CasesPreview casesData={casesData} indexData={indexData.cases} />
       <ServicesPreview
         indexData={indexData.services}
-        marketingData={servicesStore.marketing}
-        developmentData={servicesStore.development}
+        marketingData={servicesData.marketing}
+        developmentData={servicesData.development}
       />
       <HowWork indexData={indexData.howwework} />
+      <MyTeam indexData={indexData.ourteam} />
+      <NewsPreview newsData={newsData} indexData={indexData.news} />
     </>
   );
 }
@@ -63,13 +70,15 @@ export const getServerSideProps = async (context) => {
   await indexData.fetchData(currentLocale);
   await casesData.fetchPreviewData(currentLocale);
   await servicesStore.fetchData(currentLocale);
+  await newsStore.fetchPreviewData(currentLocale);
 
   return {
     props: {
       interfaceData: interfaceData.data,
       indexData: indexData.data,
       casesData: casesData.dataPreviewItems,
-      servicesStore: servicesStore.data,
+      servicesData: servicesStore.data,
+      newsData: newsStore.dataPreviewItems,
     },
   };
 };

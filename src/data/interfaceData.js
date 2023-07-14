@@ -23,6 +23,8 @@ export const interfaceData = {
       marketing: { title: 'Marketing', subtitle: 'Histories of success' },
       development: { title: 'Development', subtitle: 'Histories of success' },
       news: { title: 'News', subtitle: 'Histories of success' },
+      contacts: { title: 'Contacts', subtitle: 'Histories of success' },
+      team: { title: 'Our Team', subtitle: 'Histories of success' },
     },
     blockHeaders: {
       lastNews: {
@@ -53,6 +55,8 @@ export const interfaceData = {
       marketing: { title: 'Маркетинг', subtitle: 'Histories of success' },
       development: { title: 'Разработка', subtitle: 'Histories of success' },
       news: { title: 'Новости', subtitle: 'Histories of success' },
+      contacts: { title: 'Контакты', subtitle: 'Histories of success' },
+      team: { title: 'Моя команда', subtitle: 'Histories of success' },
     },
     blockHeaders: {
       lastNews: {

@@ -4,6 +4,8 @@ import Head from 'next/head';
 // Import layout
 import MainLayout from '@/layouts/MainLayout';
 
+import CategoryHeader from '@/components/headers/CategoryHeader/CategoryHeader';
+
 // Import stores
 import InterfaceStore from '@/stores/InterfaceStore';
 const interfaceData = InterfaceStore;
@@ -19,6 +21,7 @@ function Marketing({ interfaceData }) {
       </Head>
 
       <MainLayout data={interfaceData}>
+        <CategoryHeader data={interfaceData.catHeaders.marketing} />
         <>Marketing</>
       </MainLayout>
     </>

@@ -1,0 +1,24 @@
+.cat-header {
+}
+
+.cat-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  justify-content: center;
+  row-gap: 30px;
+}
+
+.cat-header__title {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.cat-header__subtitle {
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 800;
+  color: var(--white);
+}

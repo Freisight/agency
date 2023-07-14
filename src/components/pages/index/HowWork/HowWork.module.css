@@ -86,7 +86,7 @@
   font-weight: 800;
 }
 
-.text {
+.item__text {
   display: flex;
   flex-direction: column;
   row-gap: 10px;

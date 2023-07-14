@@ -36,7 +36,7 @@ const HowWork = ({ indexData }) => {
                 return (
                   <acticle key={step.number} className={styles['steps__item']}>
                     <div className={styles['item__number']}>{step.number}</div>
-                    <div className={styles['text']}>
+                    <div className={styles['item__text']}>
                       <div className={styles['text__title']}>{step.title}</div>
                       <div className={styles['text__text']}>{step.text}</div>
                     </div>

@@ -1,0 +1,27 @@
+.news {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.title {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.subtitle {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 200;
+  color: var(--white);
+}

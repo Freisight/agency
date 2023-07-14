@@ -1,0 +1,24 @@
+.item {
+  height: 440px;
+}
+.item__photo {
+  background-color: var(--accent);
+  height: 330px;
+}
+.item__info {
+  padding: 20px;
+}
+
+.item__name {
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--white);
+  font-weight: 800;
+}
+
+.item__position {
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--white);
+  font-weight: 200;
+}

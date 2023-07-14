@@ -1,0 +1,35 @@
+.ourteam {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.wrapper {
+  display: flex;
+  column-gap: 30px;
+}
+.titles {
+  position: sticky;
+  top: 70px;
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  height: 100%;
+}
+.title {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.subtitle {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 200;
+  color: var(--white);
+}
+.items-grid {
+  flex: 2 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
