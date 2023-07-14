@@ -11,7 +11,7 @@ class casesStore {
 
     if (process.env.NODE_ENV === 'production') {
       // URL для производственной среды
-      apiUrl = 'https://agency-ten-rouge.vercel.app/api/cases';
+      apiUrl = 'https://spontaneous-phoenix-39b801.netlify.app/api/cases';
     } else {
       // URL для других сред, например, разработки
       apiUrl = 'http://localhost:3000/api/cases';
@@ -34,7 +34,7 @@ class casesStore {
 
     if (process.env.NODE_ENV === 'production') {
       // URL для производственной среды
-      apiUrl = 'https://agency-ten-rouge.vercel.app/api/cases';
+      apiUrl = 'https://spontaneous-phoenix-39b801.netlify.app/api/cases';
     } else {
       // URL для других сред, например, разработки
       apiUrl = 'http://localhost:3000/api/cases';

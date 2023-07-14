@@ -18,7 +18,7 @@ class NewsStore {
 
     if (process.env.NODE_ENV === 'production') {
       // URL для производственной среды
-      apiUrl = 'https://agency-ten-rouge.vercel.app/api/news';
+      apiUrl = 'https://spontaneous-phoenix-39b801.netlify.app/api/news';
     } else {
       // URL для других сред, например, разработки
       apiUrl = 'http://localhost:3000/api/news';
@@ -40,7 +40,7 @@ class NewsStore {
 
     if (process.env.NODE_ENV === 'production') {
       // URL для производственной среды
-      apiUrl = 'https://agency-ten-rouge.vercel.app/api/news';
+      apiUrl = 'https://spontaneous-phoenix-39b801.netlify.app/api/news';
     } else {
       // URL для других сред, например, разработки
       apiUrl = 'http://localhost:3000/api/news';
@@ -68,7 +68,7 @@ class NewsStore {
 
     if (process.env.NODE_ENV === 'production') {
       // URL для производственной среды
-      apiUrl = 'https://agency-ten-rouge.vercel.app/api/news';
+      apiUrl = 'https://spontaneous-phoenix-39b801.netlify.app/api/news';
     } else {
       // URL для других сред, например, разработки
       apiUrl = 'http://localhost:3000/api/news';
@@ -91,7 +91,7 @@ class NewsStore {
 
     if (process.env.NODE_ENV === 'production') {
       // URL для производственной среды
-      apiUrl = 'https://agency-ten-rouge.vercel.app/api/news';
+      apiUrl = 'https://spontaneous-phoenix-39b801.netlify.app/api/news';
     } else {
       // URL для других сред, например, разработки
       apiUrl = 'http://localhost:3000/api/news';

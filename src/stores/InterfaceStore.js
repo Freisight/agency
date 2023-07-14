@@ -9,7 +9,7 @@ class interfaceStore {
 
     if (process.env.NODE_ENV === 'production') {
       // URL для производственной среды
-      apiUrl = 'https://agency-ten-rouge.vercel.app/api/interface';
+      apiUrl = 'https://spontaneous-phoenix-39b801.netlify.app/api/interface';
     } else {
       // URL для других сред, например, разработки
       apiUrl = 'http://localhost:3000/api/interface';
