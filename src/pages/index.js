@@ -26,10 +26,7 @@ const casesData = CasesStore;
 import ServicesStore from '@/stores/ServicesStore';
 const servicesData = ServicesStore;
 
-import NewsStore from '@/stores/NewsStore';
-const newsData = NewsStore;
-
-function Home({ interfaceData, indexData, casesData, servicesData, newsData }) {
+function Home({ interfaceData, indexData, casesData, servicesData }) {
   return (
     <>
       <Head>
@@ -53,7 +50,6 @@ function Home({ interfaceData, indexData, casesData, servicesData, newsData }) {
       />
       <HowWork indexData={indexData.howwework} />
       <MyTeam indexData={indexData.ourteam} />
-      <NewsPreview newsData={newsData} indexData={indexData.news} />
     </>
   );
 }
@@ -70,7 +66,6 @@ export const getServerSideProps = async (context) => {
   await indexData.fetchData(currentLocale);
   await casesData.fetchPreviewData(currentLocale);
   await servicesData.fetchData(currentLocale);
-  await newsData.fetchPreviewData(currentLocale);
 
   return {
     props: {
@@ -78,7 +73,6 @@ export const getServerSideProps = async (context) => {
       indexData: indexData.data,
       casesData: casesData.dataPreviewItems,
       servicesData: servicesData.data,
-      newsData: newsData.dataPreviewItems,
     },
   };
 };
