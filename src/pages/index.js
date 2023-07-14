@@ -43,17 +43,6 @@ function Home({ interfaceData, indexData, casesData, servicesData, newsData }) {
         menuData={interfaceData.topMenu}
         timeData={interfaceData.interface.time}
       />
-      <IndexHeader headerData={indexData.header} />
-      <Benefits benefitsData={indexData.benefits} />
-      <CasesPreview casesData={casesData} indexData={indexData.cases} />
-      <ServicesPreview
-        indexData={indexData.services}
-        marketingData={servicesData.marketing}
-        developmentData={servicesData.development}
-      />
-      <HowWork indexData={indexData.howwework} />
-      <MyTeam indexData={indexData.ourteam} />
-      <NewsPreview newsData={newsData} indexData={indexData.news} />
     </>
   );
 }
