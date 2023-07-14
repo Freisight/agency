@@ -24,10 +24,10 @@ import CasesStore from '@/stores/CasesStore';
 const casesData = CasesStore;
 
 import ServicesStore from '@/stores/ServicesStore';
-const servicesStore = ServicesStore;
+const servicesData = ServicesStore;
 
 import NewsStore from '@/stores/NewsStore';
-const newsStore = NewsStore;
+const newsData = NewsStore;
 
 function Home({ interfaceData, indexData, casesData, servicesData, newsData }) {
   return (
@@ -69,16 +69,16 @@ export const getServerSideProps = async (context) => {
   await interfaceData.fetchData(currentLocale);
   await indexData.fetchData(currentLocale);
   await casesData.fetchPreviewData(currentLocale);
-  await servicesStore.fetchData(currentLocale);
-  await newsStore.fetchPreviewData(currentLocale);
+  await servicesData.fetchData(currentLocale);
+  await newsData.fetchPreviewData(currentLocale);
 
   return {
     props: {
       interfaceData: interfaceData.data,
       indexData: indexData.data,
       casesData: casesData.dataPreviewItems,
-      servicesData: servicesStore.data,
-      newsData: newsStore.dataPreviewItems,
+      servicesData: servicesData.data,
+      newsData: newsData.dataPreviewItems,
     },
   };
 };
