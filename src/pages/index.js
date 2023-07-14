@@ -45,6 +45,15 @@ function Home({ interfaceData, indexData, casesData, servicesData, newsData }) {
       />
       <IndexHeader headerData={indexData.header} />
       <Benefits benefitsData={indexData.benefits} />
+      <CasesPreview casesData={casesData} indexData={indexData.cases} />
+      <ServicesPreview
+        indexData={indexData.services}
+        marketingData={servicesData.marketing}
+        developmentData={servicesData.development}
+      />
+      <HowWork indexData={indexData.howwework} />
+      <MyTeam indexData={indexData.ourteam} />
+      <NewsPreview newsData={newsData} indexData={indexData.news} />
     </>
   );
 }
@@ -67,6 +76,9 @@ export const getServerSideProps = async (context) => {
     props: {
       interfaceData: interfaceData.data,
       indexData: indexData.data,
+      casesData: casesData.dataPreviewItems,
+      servicesData: servicesStore.data,
+      newsData: newsStore.dataPreviewItems,
     },
   };
 };
