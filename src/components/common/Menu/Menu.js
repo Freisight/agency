@@ -2,7 +2,7 @@ import styles from './Menu.module.css';
 
 // Functions and other
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 // Icons
