@@ -1,0 +1,106 @@
+/** Общий стиль заголовком новости **/
+.titles {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.title {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.subtitle {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 200;
+  color: var(--white);
+}
+
+/** Шапка новости **/
+.news-header {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.news-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 30px;
+}
+
+.news-header__title {
+  font-size: 64px;
+  line-height: 68px;
+  font-weight: 800;
+  color: var(--white);
+}
+.news-header__subtitle {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+/** Блок даты **/
+.data {
+  background-color: var(--accent);
+  display: flex;
+  width: 130px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.data__item {
+  color: var(--white);
+  font-weight: 800;
+}
+
+/** Блок текста новости **/
+.news-text {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.news-text__wrapper {
+  background-color: var(--white);
+  padding: 30px;
+  display: flex;
+  row-gap: 30px;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.news-text__text {
+}
+
+/** Слайдер новости **/
+.news-slider {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.news-slider__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.news-slider__slider {
+}
+
+/** Последние новости **/
+.news-last {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.news-last__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.news-last__items {
+}

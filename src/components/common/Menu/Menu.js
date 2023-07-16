@@ -10,7 +10,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlinePhone } from 'react-icons/ai';
 
 // Components
-import Modal from '../Modal/Modal';
+import Modal from '../modal/Modal';
 
 const Menu = ({ menuData, timeData }) => {
   const [snowModal, setSnowModal] = useState(false);

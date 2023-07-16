@@ -2,6 +2,8 @@
 import MainLayout from '@/layouts/MainLayout';
 import ErrorPage from '../404';
 
+import NewsSingle from '@/components/pages/news/NewsSingle';
+
 // Вот тут загружаем store отдельно ИНТЕРФЕЙС от ДАННЫХ СТРАНИЦЫ.
 import InterfaceStore from '@/stores/InterfaceStore';
 const interfaceData = InterfaceStore;
@@ -18,7 +20,15 @@ const NewsItem = ({ interfaceData, currentData, lastNews }) => {
     return <ErrorPage interfaceData={interfaceData} />;
   }
   // Всё хорошо и выводим контент.
-  return <MainLayout data={interfaceData}>NewsItem</MainLayout>;
+  return (
+    <MainLayout data={interfaceData}>
+      <NewsSingle
+        currentData={currentData}
+        interfaceData={interfaceData}
+        lastNews={lastNews}
+      />
+    </MainLayout>
+  );
 };
 
 export const getServerSideProps = async (context) => {

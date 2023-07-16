@@ -11,7 +11,7 @@ import MyTeam from '@/components/pages/index/MyTeam/MyTeam';
 import NewsPreview from '@/components/pages/index/NewsPreview/NewsPreview';
 
 // Import common components
-import Menu from '@/components/common/Menu/Menu';
+import Menu from '@/components/common/menu/Menu';
 
 // Import stores
 import InterfaceStore from '@/stores/InterfaceStore';

@@ -33,3 +33,9 @@ body {
   max-width: 1420px;
   padding: 0 15px;
 }
+
+p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}

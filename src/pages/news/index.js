@@ -1,17 +1,43 @@
 // Import components
 import Head from 'next/head';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
+import { observer } from 'mobx-react-lite';
 
 // Import layout
 import MainLayout from '@/layouts/MainLayout';
 
 // Import category components
 import CategoryHeader from '@/components/headers/CategoryHeader/CategoryHeader';
+import NewsCatalog from '@/components/pages/news/NewsCatalog';
+import MoreButton from '@/components/common/moreButton/MoreButton';
 
 // Import stores
 import InterfaceStore from '@/stores/InterfaceStore';
 const interfaceData = InterfaceStore;
 
-function News({ interfaceData }) {
+import NewsStore from '@/stores/NewsStore';
+const newsData = NewsStore;
+
+function News({ interfaceData, initialNews }) {
+  const router = useRouter();
+
+  // Так как initialData не меняется, используем стор напрямую и используем функцию для обновления стора.
+  const { dataUpdated } = newsData;
+
+  // При нажатии на кнопку "Показать больше"
+  const handleShowMore = () => {
+    newsData.plusItems();
+    newsData.fetchUpdatedData(router.locale);
+  };
+
+  // При изменении локали с уже загруженными данными обновляется стор с материалами.
+  useEffect(() => {
+    newsData.fetchUpdatedData(router.locale);
+  }, [router.locale]);
+
+  console.log(initialNews);
   return (
     <>
       <Head>
@@ -23,13 +49,22 @@ function News({ interfaceData }) {
 
       <MainLayout data={interfaceData}>
         <CategoryHeader data={interfaceData.catHeaders.news} />
-        <>News</>
+
+        {dataUpdated.length === 0 ? (
+          <NewsCatalog initialNews={initialNews} />
+        ) : (
+          <NewsCatalog initialNews={dataUpdated} />
+        )}
+
+        <div>
+          <MoreButton func={handleShowMore} />
+        </div>
       </MainLayout>
     </>
   );
 }
 
-export default News;
+export default observer(News);
 
 export const getServerSideProps = async (context) => {
   const { locale } = context;
@@ -37,10 +72,12 @@ export const getServerSideProps = async (context) => {
 
   // При рендере страницы запрашиваем данные из файла с данными.
   await interfaceData.fetchData(currentLocale);
+  await newsData.fetchInitialData(currentLocale);
 
   return {
     props: {
       interfaceData: interfaceData.data,
+      initialNews: newsData.dataInitial,
     },
   };
 };
