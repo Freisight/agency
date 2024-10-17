@@ -22,7 +22,8 @@ nixLibs = [
 'stdenv.cc.cc.lib',
 ]
 nixOverlays = []
-nixpkgsArchive = 'bf446f08bff6814b569265bef8374cfdd3d8f0e0'
+
+
 
 [start]
 cmd = 'python manage.py migrate && gunicorn app.wsgi'
